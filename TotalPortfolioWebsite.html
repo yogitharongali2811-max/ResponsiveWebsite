@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+        .navbar-anchor1 {
+            border-width: 5px;
+            border-color: blue;
+            color: white;
+        }
+
+        .navbar-text1 {
+            font-family: "Roboto";
+        }
+
+        .navbar-bg {
+            background-color: #191a1d;
+            height: 100vh;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        .navbar-image1 {
+            height: 290px;
+        }
+
+        .navbar-headdown {
+            color: white;
+        }
+
+        .navbar-para {
+            color: #9aa5b1;
+        }
+
+        .navbar-btn1 {
+            height: 50px;
+            width: 130px;
+            color: white;
+            background-color: #4b6cc1;
+            border: 0px;
+            border-radius: 10px;
+        }
+        .About-bg {
+            background-color: #323f4b;
+        }
+
+        .About-facts {
+            color: #cced00;
+            font-size: 36px;
+            font-family: "Roboto";
+            font-weight: bold;
+        }
+
+        .About-head1 {
+            color: white;
+            font-size: 50px;
+            font-family: "Roboto";
+            font-weight: bold;
+        }
+
+        .About-image1 {
+            width: 100%;
+
+        }
+
+        .About-para {
+            color: #9aa5b1;
+            font-size: 24px;
+            font-family: "Roboto";
+        }
+
+        .About-bg2 {
+            background-color: #1f2933;
+        }
+
+        .About-head2 {
+            color: white;
+            font-size: 36px;
+            font-family: "Roboto";
+            font-weight: bold;
+        }
+
+        .About-cardimg {
+            width: 55%;
+            margin: auto;
+        }
+
+        .About-card1 {
+            background-color: #323f4b;
+            padding-top: 20px;
+            padding-right: 13px;
+            padding-left: 13px;
+            border-radius: 10px;
+            height: 170px;
+            width: 200px;
+        }
+        .Projects-bg1 {
+            background-color: #3e4c59;
+        }
+
+        .Projects-para {
+            color: #cced00;
+            font-family: "Roboto";
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .Projects-head1 {
+            color: white;
+            font-family: "Roboto";
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .Projects-image1 {
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
+        .Projects-card {
+            background-color: #323f4b;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 10px;
+            
+        }
+
+        .Projects-text1 {
+            color: #9aa5b1;
+            font-family: "Roboto";
+            font-size: 20px;
+        }
+
+        .Projects-head2 {
+            color: white;
+            font-family: "Roboto";
+        }
+
+        .Projects-text2 {
+            color: #9aa5b1;
+            font-family: "Roboto";
+            font-size: 30px;
+        }
+
+        .Projects-a {
+            color: #cced00;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .Projects-bigcard {
+            border-radius: 20px;
+        }
+        .Services-bg {
+            background-color: #52606d;
+
+        }
+
+        .Services-p1 {
+            color: #cced00;
+            font-weight: bold;
+            font-family: "Roboto";
+            font-size: 30px;
+        }
+
+        .Services-h1 {
+            color: white;
+            font-weight: bold;
+            font-family: "Roboto";
+            font-size: 50px;
+        }
+
+        .Services-card1 {
+            background-color: #323f4b;
+            padding: 20px;
+            border-radius: 20px;
+
+        }
+
+        .Services-img1 {
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .Services-h2 {
+            color: white;
+            font-weight: bold;
+            font-family: "Roboto";
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .Services-p2 {
+            font-size: 30px;
+            color: #9aa5b1;
+        }
+        .WorkDone-bg {
+            background-size: cover;
+            background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-work-done-bg.png");
+        }
+
+        .WorkDone-line {
+            background-color: white;
+        }
+
+        .WorkDone-box {
+            color: white;
+        }
+        .Testimonials-bg {
+            background-color: #1f2933;
+            height: 100vh;
+        }
+
+        .Testimonials-p1 {
+            color: #cced00;
+            font-family: "Roboto";
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .Testimonials-head1 {
+            color: white;
+            font-family: "Roboto";
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .Testimonials-card {
+            background-color: #323f4b;
+        }
+
+        .Testimonials-image1 {
+            height: 150px;
+            width: 150px;
+            border-radius: 150px;
+            margin: auto;
+        }
+
+        .Testimonials-p2 {
+            color: #9aa5b1;
+            font-family: "Roboto";
+            font-size: 20px;
+        }
+
+        .Testimonials-p3 {
+            color: white;
+            font-family: "Roboto";
+            font-size: 25px;
+        }
+        .Footer-bg {
+            background-color: #0d2436;
+
+        }
+
+        .Footer-image1 {
+            height: 125px;
+            width: 125px;
+            border-radius: 100px;
+        }
+
+        .Footer-p1 {
+            font-family: "Roboto";
+            font-weight: bold;
+            color: #cced00;
+            font-size: 25px;
+        }
+
+        .Footer-p2 {
+            font-family: "Roboto";
+            color: #9aa5b1;
+            font-size: 20px;
+        }
+
+        .Footer-icon {
+            color: #5a7184;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        .Footer-p3 {
+            color: #9aa5b1;
+            font-size: 20px;
+        }
+
+        .Footer-bg2 {
+            background-color: #001c32;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Home">
+        <a class="navbar-brand anchor1" href="#">
+            <div class="navbar-contain">
+                <h1>J.</h1>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#Home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#Aboutme">About me</a>
+                <a class="nav-link" href="#Projects">Projects</a>
+                <a class="nav-link" href="#RecentBlogs">Recent Blogs</a>
+                <a class="nav-link" href="#Testimonial">Testimonial</a>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 order-md-2 d-flex flex-row justify-content-start">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-banner-img.png" class="navbar-image1" />
+                </div>
+                <div class="col-12 col-md-5 order-md-1">
+                    <div>
+                        <h1 class="navbar-headdown">Hey, I am <span style="color:#4b6cc1">Jenny</span></h1>
+                        <p class="navbar-para">I am a Frontend Developer & Mentor</p>
+                        <button class="navbar-btn1">Contact me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="About-bg pb-4 pt-5" id="Aboutme">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-md-none mb-3">
+                    <p class="About-facts mb-3">Facts</p>
+                    <h1 class="About-head1">About me</h1>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 mb-2">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-about-me-img.png" class="About-image1" />
+                </div>
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="d-md-block d-none">
+                        <p class="About-facts mb-3">Facts</p>
+                        <h1 class="About-head1">About me</h1>
+                    </div>
+                    <p class="About-para">My name is Jenny Wilson, and I am currently
+                        looking for a job in Frontend Development. I
+                        have 3 years of experience working as a
+                        Frontend Developer. I have a bachelor's degree
+                        in Electronics and Communication. People
+                        find me to be an upbeat, self-motivated team
+                        player with excellent communication skills.<br><br>
+                        I am a dedicated person with a family of four. I
+                        enjoy reading, and the knowledge and
+                        perspective that my reading gives me have
+                        strengthened my teaching skills and
+                        presentation abilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="About-bg2 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="About-facts ">Skills :</p>
+                </div>
+                <div class="col-12 col-md-6 mb-3 d-flex flex-row justify-content-center">
+                    <div class="About-card1 shadow mr-2 text-center d-flex flex-column justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-html-img.png" class="About-cardimg" />
+                        <h1 class="About-head2">HTML</h1>
+                    </div>
+                    <div class="About-card1 ml-2 text-center d-flex flex-column justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-css-img.png" class="About-cardimg" />
+                        <h1 class="About-head2">CSS</h1>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-row justify-content-center">
+                    <div class="About-card1 mr-2 text-center d-flex flex-column justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-bootstrap-img.png" class="About-cardimg" />
+                        <h1 class="About-head2">Bootstrap</h1>
+                    </div>
+                    <div class="About-card1 ml-2 text-center d-flex flex-column justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-js-img.png" class="About-cardimg" />
+                        <h1 class="About-head2">JS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects-bg1 pt-5 pb-5" id="Projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="Projects-para">Portfolio</p>
+                    <h1 class="Projects-head1">Projects I have done</h1>
+                </div>
+                <div class="col-12 col-md-6 bigcard">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-project-1-img.png" class="Projects-image1" />
+                    <div class="Projects-card shadow mb-4">
+                        <p class="Projects-text1 mb-2">Web design</p>
+                        <h1 class="Projects-head2 mb-2">Royal Grand Hotel</h1>
+                        <p class="Projects-text2 mb-3">Royal Grand Hotel is a Simple
+                            Static Website. We can use this
+                            layout for building the other
+                            websites...</p>
+                        <a class="Projects-a">Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short newclass" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 Projects-bigcard">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-project-2-img.png" class="Projects-image1" />
+                    <div class="Projects-card shadow mb-4">
+                        <p class="Projects-text1 mb-2">Web design</p>
+                        <h1 class="Projects-head2 mb-2">Happy Meals</h1>
+                        <p class="Projects-text2 mb-3">Happy Meals is the best-in-class
+                            food ordering page today. With
+                            interactive UI/UX and simple call
+                            to actions...</p>
+                        <a class="Projects-a">Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short newclass" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Services-bg pt-5 pb-5" id="RecentBlogs">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <p class="Services-p1">Services</p>
+                </div>
+                <div class="col-12">
+                    <h1 class="Services-h1">What I do</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="Services-card1 shadow">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-design-img.png" class="Services-img1" />
+                        <h1 class="Services-h2">Static Websites</h1>
+                        <p class="Services-p2">A Static Website contains Webpages with fixed content. Each
+                            page is developed using HTML
+                            and CSS and displays the same
+                            information to every visitor.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="Services-card1 shadow">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-development-img.png" class="Services-img1" />
+                        <h1 class="Services-h2">Responsive Web design</h1>
+                        <p class="Services-p2">Responsive Web design is the
+                            approach that suggests that
+                            design and development should
+                            respond to the user's behaviour
+                            and environment based on
+                            screen size, platform and
+                            orientation.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="Services-card1 shadow">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-customize-img.png" class="Services-img1" />
+                        <h1 class="Services-h2">Customisable Layouts</h1>
+                        <p class="Services-p2">Customisable sites are
+                            templates with set layouts. You
+                            may be able to change photos
+                            and colors, but your site will look
+                            similar to many other sites due
+                            to the template. The same goes
+                            for...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="WorkDone-bg pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="text-center WorkDone-box pr-3 pl-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="white" class="bi bi-hand-thumbs-up icon1" viewBox="0 0 16 16">
+                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                        </svg>
+                        <hr class="WorkDone-line">
+                        <h1>10</h1>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="text-center WorkDone-box pr-3 pl-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-file-text-fill" viewBox="0 0 16 16">
+                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1" />
+                        </svg>
+                        <hr class="WorkDone-line">
+                        <h1>2,800</h1>
+                        <p>Lines of Code</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="text-center WorkDone-box pr-3 pl-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                        </svg>
+                        <hr class="WorkDone-line">
+                        <h1>15</h1>
+                        <p>Hours Worked</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Testimonials-bg pt-5 pb-5 pr-5 pl-5" id="Testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="Testimonials-p1">Testimonials</p>
+                </div>
+                <div class="col-12">
+                    <h1 class="Testimonials-head1">Our Members Says</h1>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="Testimonials-card text-center pt-3 pb-3 pr-5 pl-5 mb-3">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-1-img.png" class="Testimonials-image1" />
+                                    <p class="Testimonials-p2">Jenny is one of the best
+                                        hard-working developers,
+                                        and it was a pleasure
+                                        working with him. Having
+                                        him on the project
+                                        certainly made everything
+                                        run smoother.</p>
+                                    <p class="Testimonials-p3">- Gautham, Founder of
+                                        CocoPay Company</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="Testimonials-card text-center pt-3 pb-3 pr-5 pl-5 mb-3">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-2-img.png" class="Testimonials-image1" />
+                                    <p class="Testimonials-p2">Working with Jenny was
+                                        an excellent experience.
+                                        He is an incredibly
+                                        talented developer and
+                                        what makes him stand
+                                        out is his work ethic and
+                                        steady approach.</p>
+                                    <p class="Testimonials-p3">- Rakesh, Co-developer
+                                        in Veriphy Company</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="Testimonials-card text-center pt-3 pb-3 pr-5 pl-5 mb-3">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-3-img.png" class="Testimonials-image1" />
+                                    <p class="Testimonials-p2">I have worked with Jenny
+                                        on two complex projects,
+                                        and in both cases, the
+                                        projects are done in a
+                                        timely fashion and
+                                        delivered with excellent
+                                        customer satisfaction.</p>
+                                    <p class="Testimonials-p3">- Riya, Co-founder of
+                                        CocoPay Company</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end">
+                            <a class="downarrow" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer-bg pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 d-flex flex-row justify-content-start mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-about-me-img.png" class="Footer-image1 mr-4" />
+                    <div>
+                        <p class="Footer-p1 mb-3">Jenny</p>
+                        <p class="Footer-p2">Frontend Developer</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 justify-content-md-center">
+                    <div>
+                        <p class="Footer-p1">Phone No.</p>
+                        <div class="d-flex flex-row justify-content-start ">
+                            <i class="fa-solid fa-phone Footer-icon"></i>
+                            <p class="Footer-p3">9876543210</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div>
+                        <p class="Footer-p1">E-mail</p>
+                        <div class="d-flex flex-row justify-content-start">
+                            <i class="fa-solid fa-envelope Footer-icon"></i>
+                            <p class="Footer-p3">jenny3@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div>
+                        <p class="Footer-p1">Address</p>
+                        <div class="d-flex flex-row justify-content-start">
+                            <i class="fa-solid fa-map-location-dot Footer-icon"></i>
+                            <p class="Footer-p3">17 Ayur Vigyan Nagar, New Delhi, India.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer-bg2 pt-3 pb-2" id="Footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                        <i class="fa-regular fa-copyright Footer-icon"></i>
+                        <p class="Footer-p3">2020 bt Jennt Wilson. Created with Boostrap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
